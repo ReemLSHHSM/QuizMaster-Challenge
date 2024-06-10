@@ -13,6 +13,10 @@
             {
                 Console.WriteLine(ex.Message);
             }
+            finally
+            {
+                Console.WriteLine("Thanks for using QuizMaster see you next time ;)");
+            }
 
 
         }
