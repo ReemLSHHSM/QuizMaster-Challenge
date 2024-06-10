@@ -34,7 +34,7 @@ namespace QuizMaster
     "What is the capital of Egypt?",
     "Cairo"
 };
-
+           
             //counter to store score
             int count = 0;
 
@@ -75,7 +75,19 @@ namespace QuizMaster
                 }
                 
             }
-            Console.WriteLine($"You scored {count} out of {questionsAndAnswers.Count}");
+            if (count >= questionsAndAnswers.Count / 2)
+            {
+                Console.WriteLine($"You scored {count} out of {questionsAndAnswers.Count / 2} Great Job :)");
+                Console.WriteLine();
+
+            }
+            else
+            {
+                Console.WriteLine($"You scored {count} out of {questionsAndAnswers.Count / 2} Better luck next time :(");
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Thanks for using QuizMaster see you next time ;)");
 
         }
     }
