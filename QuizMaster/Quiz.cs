@@ -39,6 +39,7 @@ namespace QuizMaster
             int count = 0;
 
             Console.WriteLine("Welcome to QuizMaster, please answer the questions below. good luck!");
+            Console.WriteLine();
             //looping through the questions and answers
             for (int i = 0; i < questionsAndAnswers.Count; i += 2)
             {
@@ -46,20 +47,25 @@ namespace QuizMaster
                 Console.WriteLine(questionsAndAnswers[i]);
                 
                 String user_answer = Console.ReadLine();
+               
                 String answer = questionsAndAnswers[i + 1];
 
-                if (!String.IsNullOrEmpty(user_answer))
+                Boolean test=Int32.TryParse(user_answer, out int test_answer);
+
+                if (!String.IsNullOrEmpty(user_answer) && test==false)
                 {
                     if (user_answer.ToLower() == answer.ToLower())
                     {
                         count++;
                         Console.WriteLine("Your answer is correct :) good job!");
+                        Console.WriteLine();
                     }
 
                     else
                     {
                         
                         Console.WriteLine("Wrong Answer :(");
+                        Console.WriteLine();
                     }
 
                 }
