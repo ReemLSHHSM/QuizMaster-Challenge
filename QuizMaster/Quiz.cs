@@ -75,7 +75,7 @@ namespace QuizMaster
                 }
                 
             }
-            if (count >= questionsAndAnswers.Count / 2)
+            if (count >= questionsAndAnswers.Count / 4)
             {
                 Console.WriteLine($"You scored {count} out of {questionsAndAnswers.Count / 2} Great Job :)");
                 Console.WriteLine();
@@ -87,7 +87,7 @@ namespace QuizMaster
                 Console.WriteLine();
             }
 
-            Console.WriteLine("Thanks for using QuizMaster see you next time ;)");
+           
 
         }
     }
